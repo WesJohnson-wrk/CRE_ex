@@ -28,3 +28,4 @@ resource "aws_instance" "html" {
 # output "ec2_ssh_command" {
 #   value = "ssh -i 'wjohnson.pem' ubuntu@ec2-${replace(aws_instance.main.public_ip, ".", "-")}.compute-1.amazonaws.com"
 # }
+#
