@@ -1,7 +1,7 @@
 variable "default_tags" {
   type = map(string)
   default = {
-    "env" = "ppc-proj3"
+    "env" = "jenk-ex"
   }
   description = "describing my variable"
 }
