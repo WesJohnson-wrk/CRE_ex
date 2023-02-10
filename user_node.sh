@@ -50,8 +50,11 @@ sudo ufw enable
 #sudo ufw status
 #sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
+#This defines your working directory in Jenksins
 sudo mkdir /opt/jenkins
 sudo chown -R ubuntu /opt/jenkins
+
+#This line of code allows you to run docker commands in Jenkins and may require an EC2 restart
 sudo usermod -aG docker $USER && newgrp docker
 
 sudo yum install python3-pip

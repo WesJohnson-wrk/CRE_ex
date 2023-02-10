@@ -1,5 +1,4 @@
 resource "aws_instance" "node" {
-  #count = 2
   ami                    = data.aws_ssm_parameter.instance_ami.value
   instance_type          = "t3.medium"
   key_name               = "wpj_USER"
