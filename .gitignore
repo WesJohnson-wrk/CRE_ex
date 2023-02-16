@@ -10,4 +10,4 @@
 *.backup
 *.terraform
 *.terraform/modules
-
+*.tfstate

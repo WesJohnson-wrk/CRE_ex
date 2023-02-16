@@ -19,7 +19,7 @@
 # sudo sed -i "s/_AZ/$AZ/" /var/www/html/index.html
 
 
-#If using for Jenkins and Docker use this
+# #If using for Jenkins and Docker use this
 # #AWSCLI
 # curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 # sudo apt install unzip
@@ -31,7 +31,7 @@
 # sudo apt install default-jre -y
 
 # #Docker
-# sudo apt-get remove docker docker-engine docker.io containerd runc
+# sudo apt remove docker docker-engine docker.io containerd runc
 # sudo apt update -y
 # sudo apt install \
 #     ca-certificates \
@@ -67,9 +67,13 @@
 # #sudo ufw status
 # #sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
+# #Defines your working directory in Jenkins
 # sudo mkdir /opt/jenkins
+# #Allows access to /opt/jenkins
 # sudo chown -R ubuntu /opt/jenkins
+
+# #This line of code allows you to run docker commands in Jenkins and may require an EC2 restart
 # sudo usermod -aG docker $USER && newgrp docker
 
-# sudo yum install python3-pip
+# sudo apt install python3-pip
 # pip3 install Flask

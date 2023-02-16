@@ -14,7 +14,7 @@ sudo apt update -y
 sudo apt install default-jre -y
 
 #Docker
-sudo apt-get remove docker docker-engine docker.io containerd runc
+sudo apt remove docker docker-engine docker.io containerd runc
 sudo apt update -y
 sudo apt install \
     ca-certificates \
@@ -50,12 +50,13 @@ sudo ufw enable
 #sudo ufw status
 #sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
-#This defines your working directory in Jenksins
+#Defines your working directory in Jenkins
 sudo mkdir /opt/jenkins
+#Allows access to /opt/jenkins
 sudo chown -R ubuntu /opt/jenkins
 
 #This line of code allows you to run docker commands in Jenkins and may require an EC2 restart
 sudo usermod -aG docker $USER && newgrp docker
 
-sudo yum install python3-pip
-pip3 install Flask
+# sudo apt install python3-pip
+# pip3 install Flask
